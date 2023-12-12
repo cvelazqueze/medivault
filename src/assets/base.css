@@ -1,0 +1,92 @@
+:root {
+  --blue-lagoon-light: #aed9e0; /* Azul claro para representar el agua */
+  --blue-lagoon-dark: #147f8c; /* Azul más intenso */
+  --turquoise: #41b6e6; /* Turquesa vibrante */
+  --teal: #008080; /* Verde azulado */
+
+  /* Otras variables existentes permanecen igual si no se ven afectadas */
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #181818;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+/* semantic color variables updated for the Blue Lagoon palette */
+:root {
+  --color-background: var(--blue-lagoon-light);
+  --color-background-soft: var(--blue-lagoon-dark);
+  --color-background-mute: var(--turquoise);
+
+  --color-border: var(--teal);
+  --color-border-hover: var(--turquoise);
+
+  --color-heading: var(--blue-lagoon-dark);
+  --color-text: var(--blue-lagoon-dark);
+
+  --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Ajuste para el esquema de color oscuro según la paleta Blue Lagoon */
+  :root {
+    --color-background: var(--blue-lagoon-dark);
+    --color-background-soft: var(--teal);
+    --color-background-mute: var(--blue-lagoon-light);
+
+    --color-border: var(--turquoise);
+    --color-border-hover: var(--blue-lagoon-dark);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
